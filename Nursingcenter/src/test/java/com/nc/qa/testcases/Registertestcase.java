@@ -1,5 +1,7 @@
 package com.nc.qa.testcases;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -18,9 +20,9 @@ public class Registertestcase extends TestBase {
 		
 	}
 	@BeforeMethod
-public void setup()
-{
-	initialization("browser");
+public void setup() throws MalformedURLException 
+{//this code is changed
+	beforeclass("browser");
 }
 	@Test(priority=1)
 	public void reg() throws Exception
